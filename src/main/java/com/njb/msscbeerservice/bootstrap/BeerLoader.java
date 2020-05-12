@@ -2,6 +2,7 @@ package com.njb.msscbeerservice.bootstrap;
 
 import java.math.BigDecimal;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +12,8 @@ import com.njb.msscbeerservice.repositories.BeerRepository;
 @Component
 public class BeerLoader implements CommandLineRunner {
 
-	private final BeerRepository beerRepository;
+	@Autowired
+	private BeerRepository beerRepository;
 
 	public BeerLoader(BeerRepository beerRepository) {
 		this.beerRepository = beerRepository;

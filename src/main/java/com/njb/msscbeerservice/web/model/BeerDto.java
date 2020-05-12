@@ -9,6 +9,10 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Null;
 import javax.validation.constraints.Positive;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonFormatTypes;
+
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.UUID;
@@ -43,6 +47,7 @@ public class BeerDto {
 
 	@Positive
 	@NotNull
+	@JsonFormat(shape = JsonFormat.Shape.STRING)
 	private BigDecimal price;
 
 	private Integer quantityOnHand;

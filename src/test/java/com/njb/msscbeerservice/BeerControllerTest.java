@@ -55,7 +55,7 @@ class BeerControllerTest {
 	@Test
 	void getBeerById() throws Exception {
 
-		given(beerService.getById(any())).willReturn(getValidBeerDto());
+		given(beerService.getById(any(), anyBoolean())).willReturn(getValidBeerDto());
 
 		ConstrainedFields fields = new ConstrainedFields(BeerDto.class);
 

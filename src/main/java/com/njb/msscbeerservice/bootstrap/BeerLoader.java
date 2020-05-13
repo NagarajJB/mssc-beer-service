@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import com.njb.msscbeerservice.domain.Beer;
 import com.njb.msscbeerservice.repositories.BeerRepository;
 
-@Component
+//@Component
 public class BeerLoader implements CommandLineRunner {
 
 	@Autowired
@@ -21,7 +21,8 @@ public class BeerLoader implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		loadBeerObjects();
+		// loadBeerObjects();
+		// using data.sql file now
 	}
 
 	private void loadBeerObjects() {

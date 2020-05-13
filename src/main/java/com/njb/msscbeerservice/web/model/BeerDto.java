@@ -1,9 +1,8 @@
 package com.njb.msscbeerservice.web.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import java.math.BigDecimal;
+import java.time.OffsetDateTime;
+import java.util.UUID;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -11,11 +10,11 @@ import javax.validation.constraints.Null;
 import javax.validation.constraints.Positive;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonFormatTypes;
 
-import java.math.BigDecimal;
-import java.time.OffsetDateTime;
-import java.util.UUID;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
@@ -30,9 +29,11 @@ public class BeerDto {
 	private Integer version;
 
 	@Null
+	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssZ", shape = JsonFormat.Shape.STRING)
 	private OffsetDateTime createdDate;
 
 	@Null
+	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssZ", shape = JsonFormat.Shape.STRING)
 	private OffsetDateTime lastModifiedDate;
 
 	@NotBlank
@@ -41,13 +42,12 @@ public class BeerDto {
 	@NotNull
 	private BeerStyleEnum beerStyle;
 
-	@Positive
 	@NotNull
-	private Long upc;
+	private String upc;
 
+	@JsonFormat(shape = JsonFormat.Shape.STRING)
 	@Positive
 	@NotNull
-	@JsonFormat(shape = JsonFormat.Shape.STRING)
 	private BigDecimal price;
 
 	private Integer quantityOnHand;

@@ -6,7 +6,7 @@ import com.njb.msscbeerservice.domain.Beer;
 import com.njb.msscbeerservice.services.inventory.BeerInventoryService;
 import com.njb.msscbeerservice.web.model.BeerDto;
 
-public class BeerMapperDecorator implements BeerMapper {
+public abstract class BeerMapperDecorator implements BeerMapper {
 
 	@Autowired
 	private BeerInventoryService beerInvenotryService;

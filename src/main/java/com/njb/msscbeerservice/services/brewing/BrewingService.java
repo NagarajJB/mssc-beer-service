@@ -1,4 +1,4 @@
-package com.njb.msscbeerservice.services;
+package com.njb.msscbeerservice.services.brewing;
 
 import java.util.List;
 
@@ -26,16 +26,17 @@ public class BrewingService {
 	private final JmsTemplate jmsTemplate;
 	private final BeerMapper beerMapper;
 
-	@Scheduled(fixedRate = 5000)
+	@Scheduled(fixedRate = 5000) // every 5 seconds
 	public void checkForLowInventory() {
 		List<Beer> beers = beerRepository.findAll();
 
 		beers.forEach(beer -> {
-			Integer onhandInventory = beerInventoryService.getOnhandInventory(beer.getId());
-			log.debug("qty on hand" + beer.getMinOnHand());
-			log.debug("onhandInventory " + onhandInventory);
+			Integer invQOH = beerInventoryService.getOnhandInventory(beer.getId());
+			log.debug("Checking Inventory for: " + beer.getBeerName() + " / " + beer.getId());
+			log.debug("Min Onhand is: " + beer.getMinOnHand());
+			log.debug("Inventory is: " + invQOH);
 
-			if (beer.getMinOnHand() >= onhandInventory) {
+			if (beer.getMinOnHand() >= invQOH) {
 				jmsTemplate.convertAndSend(JmsConfig.BREWING_REQUEST_QUEUE,
 						new BrewBeerEvent(beerMapper.beerToBeerDto(beer)));
 			}

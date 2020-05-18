@@ -1,4 +1,4 @@
-package com.njb.msscbeerservice.events;
+package com.njb.common.events;
 
 import java.io.Serializable;
 

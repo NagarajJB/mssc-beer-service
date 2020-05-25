@@ -6,8 +6,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import com.njb.model.BeerStyleEnum;
 import com.njb.msscbeerservice.domain.Beer;
-import com.njb.msscbeerservice.web.model.BeerStyleEnum;
 
 public interface BeerRepository extends JpaRepository<Beer, UUID> {
 

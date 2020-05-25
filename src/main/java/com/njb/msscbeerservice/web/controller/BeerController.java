@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.njb.model.BeerDto;
+import com.njb.model.BeerPagedList;
+import com.njb.model.BeerStyleEnum;
 import com.njb.msscbeerservice.services.BeerService;
-import com.njb.msscbeerservice.web.model.BeerDto;
-import com.njb.msscbeerservice.web.model.BeerPagedList;
-import com.njb.msscbeerservice.web.model.BeerStyleEnum;
 
 import lombok.RequiredArgsConstructor;
 

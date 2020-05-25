@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import com.njb.model.BeerStyleEnum;
 import com.njb.msscbeerservice.domain.Beer;
 import com.njb.msscbeerservice.repositories.BeerRepository;
-import com.njb.msscbeerservice.web.model.BeerStyleEnum;
 
 @Component
 public class BeerLoader implements CommandLineRunner {

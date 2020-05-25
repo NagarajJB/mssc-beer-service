@@ -10,13 +10,13 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import com.njb.model.BeerDto;
+import com.njb.model.BeerPagedList;
+import com.njb.model.BeerStyleEnum;
 import com.njb.msscbeerservice.domain.Beer;
 import com.njb.msscbeerservice.repositories.BeerRepository;
 import com.njb.msscbeerservice.web.controller.NotFoundException;
 import com.njb.msscbeerservice.web.mappers.BeerMapper;
-import com.njb.msscbeerservice.web.model.BeerDto;
-import com.njb.msscbeerservice.web.model.BeerPagedList;
-import com.njb.msscbeerservice.web.model.BeerStyleEnum;
 
 @Service
 public class BeerServiceImpl implements BeerService {

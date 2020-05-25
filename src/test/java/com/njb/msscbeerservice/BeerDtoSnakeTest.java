@@ -7,7 +7,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.njb.msscbeerservice.web.model.BeerDto;
+import com.njb.model.BeerDto;
 
 @ActiveProfiles("snake")
 @JsonTest

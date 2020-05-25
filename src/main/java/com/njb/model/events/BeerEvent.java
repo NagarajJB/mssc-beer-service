@@ -1,8 +1,8 @@
-package com.njb.common.events;
+package com.njb.model.events;
 
 import java.io.Serializable;
 
-import com.njb.msscbeerservice.web.model.BeerDto;
+import com.njb.model.BeerDto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

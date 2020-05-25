@@ -1,4 +1,4 @@
-package com.njb.msscbeerservice.web.model;
+package com.njb.model;
 
 import java.io.Serializable;
 import java.util.List;

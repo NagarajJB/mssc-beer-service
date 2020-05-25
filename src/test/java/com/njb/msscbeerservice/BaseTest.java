@@ -2,8 +2,8 @@ package com.njb.msscbeerservice;
 
 import java.math.BigDecimal;
 
-import com.njb.msscbeerservice.web.model.BeerDto;
-import com.njb.msscbeerservice.web.model.BeerStyleEnum;
+import com.njb.model.BeerDto;
+import com.njb.model.BeerStyleEnum;
 
 public class BaseTest {
 	BeerDto getValidBeerDto() {

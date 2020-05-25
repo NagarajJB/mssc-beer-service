@@ -30,10 +30,11 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.util.StringUtils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.njb.model.BeerDto;
+import com.njb.model.BeerStyleEnum;
 import com.njb.msscbeerservice.services.BeerService;
 import com.njb.msscbeerservice.web.controller.BeerController;
-import com.njb.msscbeerservice.web.model.BeerDto;
-import com.njb.msscbeerservice.web.model.BeerStyleEnum;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.BDDMockito.given;

@@ -13,6 +13,8 @@ public class JmsConfig {
 
 	public final static String BREWING_REQUEST_QUEUE = "brewing-request";
 	public final static String NEW_INVENTORY_QUEUE = "new-inventory";
+	public final static String VALIDATE_ORDER_QUEUE = "validate-order";
+	public final static String VALIDATE_ORDER__RESPONSE_QUEUE = "validate-order-reponse";
 
 	@Bean
 	public MessageConverter messageConverter(ObjectMapper objectMapper) {

@@ -11,7 +11,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.njb.msscbeerservice.services.inventory.model.BeerInventoryDto;
 
-@FeignClient(name = "beer-inventory-service")
+/*
+ * Implementation will be given by OpenFeign on runtime,
+ * for fall back/fail over, implement the failoverfeignclient and supply to this 
+ *  Implements the feign client of happy path, InventoryServiceFeignClient
+ */
+
+@FeignClient(name = "beer-inventory-service", fallback = InventoryServiceFeignClientImplFailOver.class)
 public interface InventoryServiceFeignClient {
 
 	@RequestMapping(method = RequestMethod.GET, value = BeerInventoryServiceImplRestTemplate.INVENTORY_PATH)

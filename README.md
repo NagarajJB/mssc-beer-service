@@ -10,7 +10,7 @@
 * spring.datasource.url=jdbc:h2:mem:testdb;MODE=MYSQL -> h2 for development in mysql compatible mode
 
 * Spring Cloud Config looks for bootstrap.properties to find env. It can use profile.
-* Zipkin is expected to be running for distribute tracing - Using Docker container is adviced
+* Zipkin is expected to be running for distribute tracing - Using Docker container is advised
 
 # Application
 * BrewingService is scheduled to keep checking inventory and trigger brewing request

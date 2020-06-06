@@ -10,6 +10,7 @@
 * spring.datasource.url=jdbc:h2:mem:testdb;MODE=MYSQL -> h2 for development in mysql compatible mode
 
 * Spring Cloud Config looks for bootstrap.properties to find env. It can use profile.
+* Zipkin is expected to be running for distribute tracing - Using Docker container is adviced
 
 # Application
 * BrewingService is scheduled to keep checking inventory and trigger brewing request
@@ -20,3 +21,4 @@
 * spring-cloud-starter-openfeign -> For using OpenFeign client to use load balanced inventory service through eureka
 * spring-cloud-starter-config -> For registering to discover config from Spring Cloud Config server
 * spring-boot-configuration-processor -> For using custom properties by using @ConfigurationProperties
+* spring-cloud-starter-zipkin - Includes Spring Cloud Sleuth and Zipkin client

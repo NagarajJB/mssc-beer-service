@@ -6,7 +6,7 @@
 # Notes
 * spring.datasource.initialization-mode=EMBEDDED -> lets to load data.sql 
 * localmysql profile -> For complete local setup without service discovery, it wont register in Eureka
-* local-discovery profile -> Enables service registering and using feign client implementation to connect to inventory service as configured in LocalDiscoveryConfig and properties file.
+* local-discovery profile -> Enables service registering and using feign client implementation to connect to inventory service as configured in LocalDiscoveryConfig and properties(feign.hystrix.enabled=true) file through Eureka.
 * spring.datasource.url=jdbc:h2:mem:testdb;MODE=MYSQL -> h2 for development in mysql compatible mode
 
 * Spring Cloud Config looks for bootstrap.properties to find env. It can use profile.

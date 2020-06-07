@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.njb.msscbeerservice.config.FeignClientConfig;
 import com.njb.msscbeerservice.services.inventory.model.BeerInventoryDto;
 
 /*
@@ -17,7 +18,7 @@ import com.njb.msscbeerservice.services.inventory.model.BeerInventoryDto;
  *  Implements the feign client of happy path, InventoryServiceFeignClient
  */
 
-@FeignClient(name = "beer-inventory-service", fallback = InventoryServiceFeignClientImplFailOver.class)
+@FeignClient(name = "beer-inventory-service", fallback = InventoryServiceFeignClientImplFailOver.class, configuration = FeignClientConfig.class)
 public interface InventoryServiceFeignClient {
 
 	@RequestMapping(method = RequestMethod.GET, value = BeerInventoryServiceImplRestTemplate.INVENTORY_PATH)

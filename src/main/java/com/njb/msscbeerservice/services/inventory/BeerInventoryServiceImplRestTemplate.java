@@ -18,7 +18,7 @@ import com.njb.msscbeerservice.services.inventory.model.BeerInventoryDto;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Profile("!local-discovery")
+@Profile("!local-discovery & !digitalocean")
 @Slf4j
 @ConfigurationProperties(prefix = "sfg.brewery", ignoreUnknownFields = true)
 @Service

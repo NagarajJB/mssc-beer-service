@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.njb</groupId>
 	<artifactId>mssc-beer-service</artifactId>
-	<version>0.0.5-SNAPSHOT</version>
+	<version>0.0.7-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>mssc-beer-service</name>
 	<description>mssc-beer-service</description>
